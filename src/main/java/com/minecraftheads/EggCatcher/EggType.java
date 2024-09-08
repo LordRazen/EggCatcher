@@ -12,7 +12,7 @@ public enum EggType {
     PIG_ZOMBIE(EntityType.ZOMBIFIED_PIGLIN, "PigZombie", Material.ZOMBIFIED_PIGLIN_SPAWN_EGG),
     MAGMA_CUBE(EntityType.MAGMA_CUBE, "MagmaCube", Material.MAGMA_CUBE_SPAWN_EGG),
     CAVE_SPIDER(EntityType.CAVE_SPIDER, "CaveSpider", Material.CAVE_SPIDER_SPAWN_EGG),
-    MUSHROOM_COW(EntityType.MUSHROOM_COW, "MushroomCow", Material.MOOSHROOM_SPAWN_EGG),
+    MOOSHROOM(EntityType.MOOSHROOM, "Mooshroom", Material.MOOSHROOM_SPAWN_EGG),
     CREEPER(EntityType.CREEPER, "Creeper", Material.CREEPER_SPAWN_EGG),
     WITHER_SKELETON(EntityType.WITHER_SKELETON, "WitherSkeleton", Material.WITHER_SKELETON_SPAWN_EGG),
     STRAY(EntityType.STRAY, "Stray", Material.STRAY_SPAWN_EGG),
@@ -78,7 +78,8 @@ public enum EggType {
     TADPOLE(EntityType.TADPOLE, "Tadpole", Material.TADPOLE_SPAWN_EGG),
     WARDEN(EntityType.WARDEN, "Warden", Material.WARDEN_SPAWN_EGG),
     CAMEL(EntityType.CAMEL, "Camel", Material.CAMEL_SPAWN_EGG),
-    SNIFFER(EntityType.SNIFFER, "Sniffer", Material.SNIFFER_SPAWN_EGG);
+    SNIFFER(EntityType.SNIFFER, "Sniffer", Material.SNIFFER_SPAWN_EGG),
+    ARMADILLO(EntityType.ARMADILLO, "Armadillo", Material.ARMADILLO_SPAWN_EGG);
 
     private final EntityType entityType;
     private final String friendlyName;

@@ -43,12 +43,12 @@ public class EggCatcher extends JavaPlugin {
 
     public void CheckConfigurationFile() {
         double configVersion = this.getConfig().getDouble("ConfigVersion", 0.0D);
-        if (configVersion < 6.0D) {
+        if (configVersion < 6.2D) {
             this.MigrateConfigFile();
             this.saveConfig();
             this.reloadConfig();
         } else {
-            if (configVersion == 6.0D) {
+            if (configVersion == 6.3D) {
                 this.saveConfig();
             } else {
                 this.saveResource("config.yml", true);
@@ -61,7 +61,7 @@ public class EggCatcher extends JavaPlugin {
     public boolean MigrateConfigFile() {
         String[] keysWithBoolValue = new String[]{"UsePermissions", "UseCatchChance", "LooseEggOnFail", "UseVaultCost", "UseItemCost", "UseHealthPercentage", "ExplosionEffect", "SmokeEffect", "NonPlayerCatching", "PreventCatchingBabyAnimals", "PreventCatchingTamedAnimals", "PreventCatchingShearedSheeps", "SpawnChickenOnSuccess", "SpawnChickenOnFail", "DeleteVillagerInventoryOnCatch", "LogEggCaptures", "setPersistence"};
         String[] keysWithStringValue = new String[]{"VaultTargetBankAccount"};
-        String[] entitiesInConfig = new String[]{"Axolotl", "Bat", "Bee", "Blaze", "Cat", "CaveSpider", "Chicken", "Cod", "Cow", "Creeper", "Dolphin", "Donkey", "Drowned", "ElderGuardian", "Enderman", "Endermite", "Evoker", "Fox", "Ghast", "GlowSquid", "Goat", "Guardian", "Hoglin", "Horse", "Husk", "Llama", "MagmaCube", "Mule", "MushroomCow", "Ocelot", "Panda", "Parrot", "Phantom", "Pig", "Piglin", "PiglinBrute", "PigZombie", "Pillager", "PolarBear", "Pufferfish", "Rabbit", "Ravager", "Salmon", "Sheep", "Shulker", "Silverfish", "Skeleton", "SkeletonHorse", "Slime", "Spider", "Squid", "Stray", "Strider", "TraderLlama", "TropicalFish", "Turtle", "Vex", "Villager", "Vindicator", "WanderingTrader", "Witch", "WitherSkeleton", "Wolf", "Zoglin", "Zombie", "ZombieHorse", "ZombieVillager", "ZombifiedPiglin"};
+        String[] entitiesInConfig = new String[]{"Axolotl", "Bat", "Bee", "Blaze", "Cat", "Camel", "CaveSpider", "Chicken", "Cod", "Cow", "Creeper", "Dolphin", "Donkey", "Drowned", "ElderGuardian", "Enderman", "Endermite", "Evoker", "Fox", "Ghast", "GlowSquid", "Goat", "Guardian", "Hoglin", "Horse", "Husk", "Llama", "MagmaCube", "Mule", "MushroomCow", "Ocelot", "Panda", "Parrot", "Phantom", "Pig", "Piglin", "PiglinBrute", "PigZombie", "Pillager", "PolarBear", "Pufferfish", "Rabbit", "Ravager", "Salmon", "Sheep", "Shulker", "Silverfish", "Skeleton", "SkeletonHorse", "Slime", "Sniffer", "Spider", "Squid", "Stray", "Strider", "TraderLlama", "TropicalFish", "Turtle", "Vex", "Villager", "Vindicator", "WanderingTrader", "Witch", "WitherSkeleton", "Wolf", "Zoglin", "Zombie", "ZombieHorse", "ZombieVillager", "ZombifiedPiglin"};
         FileConfiguration config = this.getConfig();
         HashMap<String, HashMap> entityList = new HashMap();
         String[] var6 = keysWithBoolValue;
@@ -99,7 +99,7 @@ public class EggCatcher extends JavaPlugin {
         }
 
         config.set("Entity", entityList);
-        config.set("ConfigVersion", 6.0D);
+        config.set("ConfigVersion", 6.3D);
         config.set("VaultCost", (Object)null);
         config.set("HealthPercentage", (Object)null);
         config.set("CatchChance", (Object)null);
